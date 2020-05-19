@@ -7,8 +7,15 @@ AllCops:
     - "Rakefile"
     - "README.md"
     - "node_modules/**/*"
+    - "test/**/*"
+    - "**/*.jbuilder"
+    - "Gemfile"
 
   DisplayCopNames: true
+
+Style/SymbolArray:
+  Exclude:
+    - "/**/*"
 
 Layout/LineLength:
   Max: 120
