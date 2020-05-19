@@ -25,6 +25,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.admin_id = current_admin.id
 
     respond_to do |format|
       if @post.save
@@ -62,13 +63,14 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:title, :body, :admin_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def post_params
+    params.require(:post).permit(:title, :body, :admin_id)
+  end
 end
