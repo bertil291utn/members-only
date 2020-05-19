@@ -9,8 +9,7 @@ class IdeasController < ApplicationController
 
   # GET /ideas/1
   # GET /ideas/1.json
-  def show
-  end
+  def show; end
 
   # GET /ideas/new
   def new
@@ -18,8 +17,7 @@ class IdeasController < ApplicationController
   end
 
   # GET /ideas/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /ideas
   # POST /ideas.json
