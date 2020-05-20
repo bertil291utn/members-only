@@ -6,7 +6,7 @@ To become a member try to sing-up as a new admin user.
 
 ![screenshot](/public/screenshot.png)
 
-## Built With
+## Built With 
 
 - Ruby 2.6.5p114
 - Rails 5.2.4.2
