@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
+  before_action :signed_in_only!, only: [:new, :create]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+
+  def signed_in_only!
+    redirect_to new_admin_session_path unless signed_in?
+  end
 
   # GET /posts
   # GET /posts.json
