@@ -17,6 +17,10 @@ Style/SymbolArray:
   Exclude:
     - "/**/*"
 
+Style/StringLiterals:
+  Exclude:
+    - "/**/*"
+
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
